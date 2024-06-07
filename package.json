@@ -1,0 +1,28 @@
+{
+  "name": "browsercookies",
+  "version": "1.0.0",
+  "description": "TypeScript / JavaScript library to manage cookies easy and securely",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Progralink/BrowserCookies.git"
+  },
+  "keywords": [
+    "cookie",
+    "cookies",
+    "browser"
+  ],
+  "author": "Progralink",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Progralink/BrowserCookies/issues"
+  },
+  "homepage": "https://github.com/Progralink/BrowserCookies#readme",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}
