@@ -1,5 +1,5 @@
 /* 
- * BrowserCookies library v1.0.0
+ * BrowserCookies library v1.0.1
  * https://github.com/Progralink/BrowserCookies
  *
  * 
@@ -95,6 +95,10 @@ class BrowserCookie implements BrowserCookieOptions {
     }
 
     public toString() {
+		let encodeSimple = function(part: string): string {
+			return part.replace("%", "%25").replace(";", "%3B");
+		}
+	
         let s = encodeURIComponent(this.name) + '=';
         if (this.value) {
             s += encodeURIComponent(this.value);
@@ -106,10 +110,10 @@ class BrowserCookie implements BrowserCookieOptions {
             s += ';Max-Age=' + this.maxAge;
         }
         if (this.domain) {
-            s += ';Domain=' + this.domain;
+            s += ';Domain=' + encodeSimple(this.domain);
         }
         if (this.path) {
-            s += ';Path=' + this.path;
+            s += ';Path=' + encodeSimple(this.path);
         }
         if (this.sameSite) {
             s += ';SameSite=' + this.sameSite;
